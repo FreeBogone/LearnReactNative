@@ -1,15 +1,26 @@
-import { Text, View } from "react-native";
+import ParallaxScrollView from "@/components/ParallaxScrollView";
+import { ThemedView } from "@/components/ThemedView";
+import { Text, View, SafeAreaView, StyleSheet } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <ThemedView
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+          <Text>Home Screen</Text>
+      </ThemedView>
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
