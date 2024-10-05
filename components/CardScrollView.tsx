@@ -53,6 +53,7 @@ const screenWidth = Dimensions.get('window').width;
 
 const CardScrollView = () => (
 <ScrollView style={styles.container}>
+    <Image source={require('../assets/images/Icon-Only-Black.png')} style={styles.cornerLogo}/>
     <ThemedText type="title">Welcome!</ThemedText>
     {data.map((group, index) => (
         <Card key={index} name={group.name} description={group.Description} numMembers={group.numMembers} />
@@ -64,6 +65,13 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       width: screenWidth,
+    },
+    cornerLogo: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: 50,
+      height: 50,
     },
   });
 
